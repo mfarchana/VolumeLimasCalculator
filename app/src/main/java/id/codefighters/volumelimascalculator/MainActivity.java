@@ -17,9 +17,9 @@ public class MainActivity extends AppCompatActivity {
     Button hitung;
     TextView hasil;
 
-    int panjang;
-    int lebar;
-    int tinggi;
+    double panjang;
+    double lebar;
+    double tinggi;
 
     // hasil;
 
@@ -53,19 +53,19 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Form Tinggi tidak boleh kosong", Toast.LENGTH_SHORT).show();
         }
         try{
-            panjang = Integer.parseInt(input_panjang.getText().toString());
+            panjang = Double.parseDouble(input_panjang.getText().toString());
         }catch (Exception e){
         }
         try{
-            lebar = Integer.parseInt(input_lebar.getText().toString());
+            lebar = Double.parseDouble(input_lebar.getText().toString());
         }catch (Exception e){
         }
         try{
-            tinggi = Integer.parseInt(input_tinggi.getText().toString());
+            tinggi = Double.parseDouble(input_tinggi.getText().toString());
         }catch (Exception e){
         }
 
-        double result = (panjang*lebar)*tinggi*0.333;
+        double result = (panjang*lebar)*tinggi/3;
         hasil.setText("  Volume = "+String.valueOf(result)
         +"\n\n\n  Regards,"
         +"\n  MFarchanA");
